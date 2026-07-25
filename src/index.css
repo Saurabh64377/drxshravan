@@ -18,6 +18,7 @@
 html.lenis,
 html.lenis body {
   height: auto;
+  overflow-x: hidden;
 }
 
 .lenis.lenis-smooth {
@@ -34,6 +35,12 @@ html.lenis body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .fixed.bottom-4 {
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
 }
 
 body {
@@ -350,6 +357,61 @@ svg {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
+
+@keyframes blob-drift-1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(24px) scale(1.08); }
+}
+
+@keyframes blob-drift-2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-24px) scale(1.1); }
+}
+
+@keyframes blob-drift-3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -12px); }
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes float-card-1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-card-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes float-card-rotate {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(8deg); }
+}
+
+@keyframes about-blob-1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(20px) scale(1.06); }
+}
+
+@keyframes about-blob-2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-18px) scale(1.08); }
+}
+
+.css-blob-1 { animation: blob-drift-1 9s ease-in-out infinite; }
+.css-blob-2 { animation: blob-drift-2 10s ease-in-out infinite; }
+.css-blob-3 { animation: blob-drift-3 11s ease-in-out infinite; }
+.css-float-y { animation: float-y 7s ease-in-out infinite; }
+.css-float-card-1 { animation: float-card-1 4s ease-in-out infinite; }
+.css-float-card-2 { animation: float-card-2 4.4s ease-in-out infinite; }
+.css-float-card-rotate { animation: float-card-rotate 5s ease-in-out infinite; }
+.css-about-blob-1 { animation: about-blob-1 9s ease-in-out infinite; }
+.css-about-blob-2 { animation: about-blob-2 10s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   *,

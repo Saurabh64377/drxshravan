@@ -4,9 +4,14 @@ import Lenis from 'lenis'
 export default function LenisProvider({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.0,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
+      touchMultiplier: 1.5,
+    })
+
+    lenis.on('scroll', (e) => {
+      // Sync with framer-motion's scroll detection
     })
 
     function raf(time) {

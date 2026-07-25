@@ -378,9 +378,9 @@ function Hero({ onBook }) {
     <section id="home" className="hero-shell mesh-bg relative isolate overflow-hidden pb-12 pt-28 sm:pb-16 sm:pt-32 lg:flex lg:min-h-[min(900px,calc(100svh-18px))] lg:flex-col lg:justify-center lg:pb-10 lg:pt-28">
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(112deg,rgba(255,255,255,.9),rgba(255,255,255,.18)_48%,rgba(255,255,255,.52))]" />
       <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px bg-gradient-to-b from-transparent via-blue-100/60 to-transparent lg:block" />
-      <motion.div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-blue-300/20 blur-[82px]" animate={{ y: [0, 24, 0], scale: [1, 1.08, 1] }} transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }} />
-      <motion.div className="pointer-events-none absolute right-[-5%] top-20 h-80 w-80 rounded-full bg-emerald-300/20 blur-[90px]" animate={{ y: [0, -24, 0], scale: [1, 1.1, 1] }} transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }} />
-      <motion.div className="pointer-events-none absolute bottom-16 left-[43%] hidden h-40 w-40 rounded-full bg-sky-200/30 blur-[60px] lg:block" animate={{ x: [0, 20, 0], y: [0, -12, 0] }} transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut' }} />
+      <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-blue-300/20 blur-[82px] css-blob-1" />
+      <div className="pointer-events-none absolute right-[-5%] top-20 h-80 w-80 rounded-full bg-emerald-300/20 blur-[90px] css-blob-2" />
+      <div className="pointer-events-none absolute bottom-16 left-[43%] hidden h-40 w-40 rounded-full bg-sky-200/30 blur-[60px] lg:block css-blob-3" />
       <div className="hero-orbit hero-orbit-one pointer-events-none absolute left-[8%] top-[30%] hidden h-3 w-3 rounded-full bg-blue-400/50 lg:block" />
       <div className="hero-orbit hero-orbit-two pointer-events-none absolute right-[9%] top-[22%] hidden h-2 w-2 rounded-full bg-emerald-400/60 lg:block" />
 
@@ -474,9 +474,9 @@ function Hero({ onBook }) {
 
         <motion.div
           initial={{ opacity: 0, x: 34 }}
-          animate={{ opacity: 1, x: 0, y: [0, -7, 0] }}
-          transition={{ opacity: { duration: 0.8, delay: 0.15 }, x: { duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }, y: { duration: 7, repeat: Infinity, ease: 'easeInOut' } }}
-          className="hero-illustration relative mx-auto w-full max-w-[510px] lg:max-w-[500px] lg:justify-self-end xl:max-w-[530px]"
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ opacity: { duration: 0.8, delay: 0.15 }, x: { duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] } }}
+          className="hero-illustration relative mx-auto w-full max-w-[510px] lg:max-w-[500px] lg:justify-self-end xl:max-w-[530px] css-float-y"
         >
           <div className="hero-illustration-glow absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-blue-300/35 via-sky-200/15 to-emerald-300/35 blur-3xl" />
           <div className="glass-card relative overflow-visible rounded-[2.2rem] border-white/80 p-3.5 shadow-[0_35px_90px_rgba(37,99,235,.14)] sm:p-5">
@@ -489,20 +489,20 @@ function Hero({ onBook }) {
                 {/* <div className="absolute left-[38%] top-[34%] h-[20%] w-[24%] rounded-b-[3rem] bg-[#f8d7c6]" /> */}
                 {/* <div className="absolute left-1/2 top-[57%] h-[35%] w-[45%] -translate-x-1/2 rounded-[2rem] bg-blue-600" /> */}
                 {/* <div className="absolute left-1/2 top-[60%] h-[28%] w-[28%] -translate-x-1/2 rounded-full border-[clamp(10px,1.5vw,18px)] border-white/90" /> */}
-              <motion.div className="absolute left-4 bottom-20 rounded-2xl bg-white/95 p-3 shadow-xl ring-1 ring-slate-100" animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity }}>
+              <div className="absolute left-4 bottom-20 rounded-2xl bg-white/95 p-3 shadow-xl ring-1 ring-slate-100 css-float-card-1">
                   {/* <HeartPulse className="h-6 w-6 text-rose-500" /> */}
                    <Stethoscope  className="h-9 w-9 text-black-500" />
-                </motion.div>
+                </div>
                
-                <motion.div className="absolute left-4 top-20 rounded-2xl bg-white/95 p-3 shadow-xl ring-1 ring-slate-100" animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity }}>
+                <div className="absolute left-4 top-20 rounded-2xl bg-white/95 p-3 shadow-xl ring-1 ring-slate-100 css-float-card-1">
                   <HeartPulse className="h-8 w-8 text-rose-500" />
-                </motion.div>
-                <motion.div className="absolute bottom-12 right-4 rounded-2xl bg-white/95 p-3 shadow-xl ring-1 ring-slate-100" animate={{ y: [0, 10, 0] }} transition={{ duration: 4.4, repeat: Infinity }}>
+                </div>
+                <div className="absolute bottom-12 right-4 rounded-2xl bg-white/95 p-3 shadow-xl ring-1 ring-slate-100 css-float-card-2">
                   <Pill className="h-6 w-6 text-emerald-500" />
-                </motion.div>
-                <motion.div className="absolute right-6 top-12 rounded-2xl bg-white/95 p-3 shadow-xl ring-1 ring-slate-100" animate={{ rotate: [0, 8, 0], y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity }}>
+                </div>
+                <div className="absolute right-6 top-12 rounded-2xl bg-white/95 p-3 shadow-xl ring-1 ring-slate-100 css-float-card-rotate">
                   <TestTubes className="h-6 w-6 text-blue-600" />
-                </motion.div>
+                </div>
               </div>
               <div className="relative mx-auto mt-4 flex max-w-[440px] items-center justify-between gap-3 rounded-2xl border border-white/80 bg-white/75 px-4 py-3 shadow-sm backdrop-blur-xl">
                 <div className="flex items-center gap-2.5">
@@ -603,8 +603,8 @@ function AboutSection() {
     <Section id="about" className="section-alt-bg" eyebrow="About the clinic" title="A trusted medical store with the calm feel of a private clinic." subtitle="Built around personal relationships, clear medicine guidance, and compassionate support for local families.">
       <div className="relative grid items-stretch gap-8 lg:grid-cols-[1fr_1.1fr]">
         {/* Decorative blobs */}
-        <motion.div className="pointer-events-none absolute -left-20 top-[10%] h-64 w-64 rounded-full bg-blue-300/15 blur-[80px]" animate={{ y: [0, 20, 0], scale: [1, 1.06, 1] }} transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }} />
-        <motion.div className="pointer-events-none absolute -right-16 bottom-[15%] h-56 w-56 rounded-full bg-emerald-300/15 blur-[70px]" animate={{ y: [0, -18, 0], scale: [1, 1.08, 1] }} transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }} />
+        <div className="pointer-events-none absolute -left-20 top-[10%] h-64 w-64 rounded-full bg-blue-300/15 blur-[80px] css-about-blob-1" />
+        <div className="pointer-events-none absolute -right-16 bottom-[15%] h-56 w-56 rounded-full bg-emerald-300/15 blur-[70px] css-about-blob-2" />
 
         {/* ── Left: Doctor Profile ── */}
         <Reveal>
@@ -633,8 +633,8 @@ function AboutSection() {
                 {/* Stats */}
                 <div className="mt-auto grid grid-cols-3 gap-3 pt-6">
                   {[
-                    ['10+', 'Years Exp.'],
-                    ['5K+', 'Patients'],
+                    ['4+', 'Years Exp.'],
+                    ['500+', 'Patients'],
                     ['4.9', 'Rating'],
                   ].map(([value, label]) => (
                     <div key={label} className="rounded-xl border border-slate-200/60 bg-white/80 p-3 text-center transition-all duration-300 hover:border-blue-200/60 hover:shadow-[0_8px_24px_rgba(37,99,235,.06)]">
@@ -1146,14 +1146,39 @@ function FloatingActions({ onBook }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
   return (
-    <div className="fixed bottom-4 right-3 z-50 flex flex-col items-center gap-2.5 sm:bottom-5 sm:right-5 sm:gap-3">
+    <div className="pointer-events-none fixed bottom-4 right-3 z-50 flex flex-col items-center gap-2 sm:bottom-6 sm:right-5 sm:gap-2.5">
       <AnimatePresence>
         {topVisible && (
-          <motion.button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="grid h-10 w-10 place-items-center rounded-full bg-white/90 text-slate-950 ring-1 ring-slate-200/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 sm:h-12 sm:w-12" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 12 }} aria-label="Scroll to top"><ChevronUp className="h-4 w-4 sm:h-5 sm:w-5" /></motion.button>
+          <motion.button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="pointer-events-auto grid h-9 w-9 place-items-center rounded-full bg-white text-slate-950 shadow-lg ring-1 ring-slate-200/80 backdrop-blur-sm sm:h-10 sm:w-10"
+            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.9 }}
+            transition={{ duration: 0.2 }}
+            aria-label="Scroll to top"
+          >
+            <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5" />
+          </motion.button>
         )}
       </AnimatePresence>
-      <a href={whatsappHref} target="_blank" rel="noreferrer" className="group grid h-11 w-11 place-items-center rounded-full bg-emerald-500 p-3 text-white transition-all duration-300 hover:-translate-y-1 sm:h-13 sm:w-13 sm:p-4" aria-label="WhatsApp clinic"><FaWhatsapp className="h-5 w-5 transition-transform duration-300 group-hover:scale-110 sm:h-6 sm:w-6" /></a>
-      <a href={phoneHref} className="group grid h-11 w-11 place-items-center rounded-full bg-blue-600 p-3 text-white transition-all duration-300 hover:-translate-y-1 sm:h-13 sm:w-13 sm:p-4" aria-label="Call clinic"><Phone className="h-5 w-5 transition-transform duration-300 group-hover:scale-110 sm:h-6 sm:w-6" /></a>
+      <a
+        href={whatsappHref}
+        target="_blank"
+        rel="noreferrer"
+        className="pointer-events-auto grid h-10 w-10 place-items-center rounded-full bg-emerald-500 text-white shadow-lg transition-transform hover:scale-105 sm:h-11 sm:w-11"
+        aria-label="WhatsApp clinic"
+      >
+        <FaWhatsapp className="h-5 w-5 sm:h-[22px] sm:w-[22px]" />
+      </a>
+      <a
+        href={phoneHref}
+        className="pointer-events-auto grid h-10 w-10 place-items-center rounded-full bg-blue-600 text-white shadow-lg transition-transform hover:scale-105 sm:h-11 sm:w-11"
+        aria-label="Call clinic"
+      >
+        <Phone className="h-5 w-5 sm:h-[22px] sm:w-[22px]" />
+      </a>
     </div>
   )
 }
@@ -1226,7 +1251,7 @@ function NotFound() {
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false)
   return (
-    <div className="min-h-screen text-slate-800">
+    <div className="min-h-screen overflow-x-hidden text-slate-800">
       <LoadingScreen />
       <Navbar onBook={() => setModalOpen(true)} />
       <PageTransition>
