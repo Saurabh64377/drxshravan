@@ -4,12 +4,15 @@ import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import App from './App.jsx'
+import LenisProvider from './LenisProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
-        <App />
+        <LenisProvider>
+          <App />
+        </LenisProvider>
       </BrowserRouter>
     </HelmetProvider>
   </StrictMode>,
