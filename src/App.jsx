@@ -1131,8 +1131,20 @@ function Footer() {
         </div>
       </div>
       <div className="premium-divider relative mx-auto mt-12 max-w-7xl" />
-      <div className="relative mx-auto mt-6 max-w-7xl text-center text-sm text-slate-500 sm:text-left">
-        © {new Date().getFullYear()} {clinic.name}. All rights reserved.
+      <div className="relative mx-auto mt-6 flex max-w-7xl flex-col items-center justify-between gap-2 text-sm text-slate-500 sm:flex-row sm:text-left">
+        <span>© {new Date().getFullYear()} {clinic.name}. All rights reserved.</span>
+        <span>
+          Made By{' '}
+          <a
+            href="https://instagram.com/_____saurabh_.x"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-blue-400 transition-colors hover:text-blue-300"
+            style={{ textDecoration: 'underline', textDecorationColor: 'white' }}
+          >
+            Saurabh Agrahari
+          </a>
+        </span>
       </div>
     </footer>
   )
